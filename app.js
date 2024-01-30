@@ -10,7 +10,7 @@ var app = express();
 
 const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongodb://127.0.0.1:27017', {
+MongoClient.connect('mongodb+srv://per:qGbIdiuZSIQpZffb@cluster0.ip5ifve.mongodb.net/?retryWrites=true&w=majority', {
     useUnifiedTopology: true
 })
 .then(client => {
@@ -30,3 +30,5 @@ app.use('/', indexRouter);
 app.use('/cars', carsRouter);
 
 module.exports = app;
+
+

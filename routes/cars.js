@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 
-  req.app.locals.db.collection('cars').find({"modelYear": {$gte: 2000}}).sort({"modelYear": 1}).toArray()
+  req.app.locals.db.collection('cars').find({"modelYear": {$gte: 1995}}).sort({"modelYear": 1}).toArray()
 
   .then(results => {
     //console.log(results);
